@@ -4,7 +4,7 @@ import App from "./App";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Mainpage from "./pages/mainpage";
-import About from "./pages/About";
+// import About from "./pages/About";
 import Home from "./pages/Home";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

@@ -94,7 +94,10 @@ const Home: React.FC = () => {
 
         <meta name="theme-color" content="#0f172a" />
 
-        <link rel="canonical" href="https://dkumarjaj.in/portfolio" />
+        <link
+          rel="canonical"
+          href="https://dkumarjaj.jackjohan7520.workers.dev/portfolio"
+        />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
@@ -107,11 +110,14 @@ const Home: React.FC = () => {
           property="og:description"
           content="Tech Mentor, Technology Enthusiast, Full-Stack Developer and Computer Science Educator from Harhanja, Jhajha, Bihar."
         />
-        <meta property="og:url" content="https://dkumarjaj.in/portfolio/" />
+        <meta
+          property="og:url"
+          content="https://dkumarjaj.jackjohan7520.workers.dev/portfolio"
+        />
 
         <meta
           property="og:image"
-          content="https://dkumarjaj.in/android-chrome-512x512.png"
+          content="https://dkumarjaj.jackjohan7520.workers.dev/android-chrome-512x512.png"
         />
 
         {/* Twitter */}
@@ -129,7 +135,7 @@ const Home: React.FC = () => {
 
         <meta
           name="twitter:image"
-          content="https://dkumarjaj.in/android-chrome-512x512.png"
+          content="https://dkumarjaj.jackjohan7520.workers.dev/android-chrome-512x512.png"
         />
 
         {/* Schema */}
@@ -137,7 +143,7 @@ const Home: React.FC = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Person",
-
+            url: "https://dkumarjaj.jackjohan7520.workers.dev/portfolio",
             name: "Devendra Kumar",
 
             alternateName: [
@@ -168,7 +174,8 @@ const Home: React.FC = () => {
               "https://x.com/dkumarjaj",
             ],
 
-            image: "https://dkumarjaj.in/android-chrome-512x512.png",
+            image:
+              "https://dkumarjaj.jackjohan7520.workers.dev/android-chrome-512x512.png",
 
             knowsAbout: [
               "Web Development",

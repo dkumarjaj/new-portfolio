@@ -41,25 +41,28 @@ function App() {
 
         <meta name="theme-color" content="#0f172a" />
 
-        <link rel="canonical" href="https://dkumarjaj.in/" />
+        <link
+          rel="canonical"
+          href="https://dkumarjaj.jackjohan7520.workers.dev/"
+        />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Devendra Kumar | Welcome"
-        />
+        <meta property="og:title" content="Devendra Kumar | Welcome" />
 
         <meta
           property="og:description"
           content="Software Engineer, Full-Stack Developer, Problem Solver and Technology Enthusiast from Jhajha, Bihar."
         />
 
-        <meta property="og:url" content="https://dkumarjaj.in/" />
+        <meta
+          property="og:url"
+          content="https://dkumarjaj.jackjohan7520.workers.dev/"
+        />
 
         <meta
           property="og:image"
-          content="https://dkumarjaj.in/android-chrome-512x512.png"
+          content="https://dkumarjaj.jackjohan7520.workers.dev/android-chrome-512x512.png"
         />
 
         {/* Twitter */}
@@ -77,9 +80,8 @@ function App() {
 
         <meta
           name="twitter:image"
-          content="https://dkumarjaj.in/android-chrome-512x512.png"
+          content="https://dkumarjaj.jackjohan7520.workers.dev/android-chrome-512x512.png"
         />
-
 
         {/* Schema */}
         <script type="application/ld+json">
@@ -87,7 +89,7 @@ function App() {
             "@context": "https://schema.org",
             "@type": "Person",
             name: "Devendra Kumar",
-            url: "https://dkumarjaj.in",
+            url: "https://dkumarjaj.jackjohan7520.workers.dev/",
             jobTitle: "Software Engineer",
             address: {
               "@type": "PostalAddress",
@@ -123,7 +125,7 @@ function App() {
 
         <div className="intro">
           <p className="part1">
-            Welcome to <span className="highlight doamin">dkumarjaj.in</span>
+            Welcome to <span className="highlight doamin">dkumarjaj</span>
           </p>
           <p className="part2">
             I'm <span className="highlight name">Devendra Kumar</span> — a

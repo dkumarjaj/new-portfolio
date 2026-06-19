@@ -2,4 +2,4 @@ User-agent: *
 
 Allow: /
 
-Sitemap: https://dkumarjaj.in/sitemap.xml
+Sitemap: https://dkumarjaj.jackjohan7520.workers.dev/sitemap.xml
