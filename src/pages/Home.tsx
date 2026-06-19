@@ -1,5 +1,5 @@
 "use client";
-
+import { Helmet } from "react-helmet-async";
 import React, { useRef, useEffect, useState } from "react";
 import { Link } from "react-router";
 import Image1 from "../assets/images/dev6.jpeg";
@@ -32,7 +32,6 @@ const Home: React.FC = () => {
 
   const [time, setTime] = useState(new Date());
 
-  const name = "Devendra Kumar";
   const intro =
     "Crafting elegant digital experiences with clean code and creative solutions.";
 
@@ -63,17 +62,153 @@ const Home: React.FC = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Devendra Kumar | Tech Enthusiast & Mentor </title>
+
+        <meta
+          name="description"
+          content="Devendra Kumar is a Tech Mentor, Technology Enthusiast, Full-Stack Developer and Computer Science Educator from Harhanja, Jhajha, Bihar. Passionate about technology, software development, AI, SEO and digital innovation."
+        />
+        <meta
+          name="keywords"
+          content="
+  Devendra Kumar,
+  Devendra Kumar Jhajha,
+  Devendra Kumar Harhanja,
+  Tech Mentor Jhajha,
+  Technology Enthusiast Bihar,
+  Computer Science Teacher Jhajha,
+  Computer Science Educator Bihar,
+  Full Stack Developer Bihar,
+  Software Engineer Bihar,
+  Web Developer Jamui,
+  React Developer Bihar,
+  MERN Stack Developer,
+  Harhanja Jhajha Bihar,
+  Technology Mentor Bihar,
+  Programming Mentor Bihar
+  "
+        />
+
+        <meta name="robots" content="index, follow" />
+
+        <meta name="theme-color" content="#0f172a" />
+
+        <link rel="canonical" href="https://dkumarjaj.in/portfolio" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Devendra Kumar | Developer, Tech Mentor & Technology Enthusiast"
+        />
+
+        <meta
+          property="og:description"
+          content="Tech Mentor, Technology Enthusiast, Full-Stack Developer and Computer Science Educator from Harhanja, Jhajha, Bihar."
+        />
+        <meta property="og:url" content="https://dkumarjaj.in/portfolio/" />
+
+        <meta
+          property="og:image"
+          content="https://dkumarjaj.in/android-chrome-512x512.png"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta
+          name="twitter:title"
+          content="Devendra Kumar | Tech Enthusiast & Mentor"
+        />
+
+        <meta
+          name="twitter:description"
+          content="Tech Mentor, Technology Enthusiast and Full-Stack Developer from Harhanja, Jhajha, Bihar."
+        />
+
+        <meta
+          name="twitter:image"
+          content="https://dkumarjaj.in/android-chrome-512x512.png"
+        />
+
+        {/* Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+
+            name: "Devendra Kumar",
+
+            alternateName: [
+              "Devendra Kumar Jhajha",
+              "Devendra Kumar Bihar",
+              "DKumarJaj",
+            ],
+
+            description:
+              "Tech Mentor, Technology Enthusiast, Full-Stack Developer, Software Engineer and Computer Science Educator from Harhanja, Jhajha, Bihar.",
+
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Harhanja",
+              addressRegion: "Bihar",
+              addressCountry: "India",
+            },
+
+            jobTitle: [
+              "Tech Mentor",
+              "Computer Science Educator",
+              "Full-Stack Developer",
+              "Software Engineer",
+            ],
+            sameAs: [
+              "https://github.com/dkumarjaj",
+              "https://www.linkedin.com/in/dkumarjaj/",
+              "https://x.com/dkumarjaj",
+            ],
+
+            image: "https://dkumarjaj.in/android-chrome-512x512.png",
+
+            knowsAbout: [
+              "Web Development",
+              "React",
+              "TypeScript",
+              "Node.js",
+              "Express.js",
+              "MongoDB",
+              "JavaScript",
+              "SEO",
+              "Digital Marketing",
+              "Artificial Intelligence",
+              "Arduino",
+              "Programming",
+              "Computer Science",
+              "Technology Education",
+              "Problem Solving",
+            ],
+          })}
+        </script>
+      </Helmet>
+
       <section className="hero">
         <div className="hero-container">
           {/* Left Content */}
           <div className="hero-content">
-            <h1 className="hero-name">
-              <span className="sentence">I'm</span> {name}
-            </h1>
+            <h1 className="hero-name">Devendra Kumar</h1>
 
             <h3 className="hero-role">
               And I'm a <span ref={typedRef} className="skills"></span>.
             </h3>
+
+            <p className="hero-subtitle sr-only">
+              Tech Enthusiast, Mentor & Full-Stack Developer from Harhanja,
+              Jhajha, Bihar
+            </p>
+            <h2 className="hero-text">
+              Tech Enthusiast, Mentor & Full-Stack Developer from Harhanja,
+              Jhajha, Bihar
+            </h2>
 
             <p className="hero-text">{intro}</p>
 
@@ -261,6 +396,16 @@ const Home: React.FC = () => {
         <Link to="/portfolio/contact" className="btn-primary large">
           Get In Touch
         </Link>
+        <h2 className="sr-only">
+          Devendra Kumar from Harhanja, Jhajha, Jamui, Bihar
+        </h2>
+
+        <p className="sr-only">
+          Devendra Kumar is a Tech Mentor, Technology Enthusiast, Full-Stack
+          Developer, Software Engineer, Computer Science Educator, Web
+          Developer, React Developer, MERN Stack Developer and Problem Solver
+          from Harhanja, Jhajha, Jamui, Bihar, India.
+        </p>
       </section>
     </>
   );

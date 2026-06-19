@@ -24,7 +24,7 @@ function Nav() {
         className={({ isActive }) =>
           isActive ? "nav-item active" : "nav-item"
         }
-        to="/portfolio/Project"
+        to="/portfolio/project"
       >
         Projects
       </NavLink>
