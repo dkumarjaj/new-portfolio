@@ -14,11 +14,11 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/" element={<App />} />
         <Route path="/portfolio" element={<Mainpage />}>
           <Route path="" element={<Home />}></Route>
-          <Route path="about" element={<About />}></Route>
-          <Route path="project" element={<About />}></Route>
-          <Route path="contact" element={<About />}></Route>
-          <Route path="gallery" element={<About />}></Route>
-          <Route path="Achievements" element={<About />}></Route>
+          <Route path="about" element={<Home />}></Route>
+          <Route path="project" element={<Home />}></Route>
+          <Route path="contact" element={<Home />}></Route>
+          <Route path="gallery" element={<Home />}></Route>
+          <Route path="Achievements" element={<Home />}></Route>
         </Route>
         <Route path="*" element={<App />} />
       </Routes>
