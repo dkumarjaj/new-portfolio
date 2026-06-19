@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "Anklada";
+  src: url("./assets/fonts/Anklada Novaz regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "AntonioZull";
+  src: url("./assets/fonts/AntonioZull-Brush.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "BMSPA";
+  src: url("./assets/fonts/BMSPA___.TTF") format("truetype");
+}
+
+@font-face {
+  font-family: "Cubic";
+  src: url("./assets/fonts/cubic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DopeDisplay";
+  src: url("./assets/fonts/DopeDisplay-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Ethnocentric";
+  src: url("./assets/fonts/Ethnocentric-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "KGPrimary";
+  src: url("./assets/fonts/KGPrimaryDotsLined.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "KGPrimaryNoSpace";
+  src: url("./assets/fonts/KGPrimaryDotsLinedNOSPACE.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "UMGambyr";
+  src: url("./assets/fonts/um-gambyr-bold.otf") format("opentype");
+}
+
+:root {
+  --color-primary: #f0f4f8;
+  --color-sacondry: #3f4e4f;
+  --color-accent: #a1d0e2;
+  --color-highlight: #ff0000;
+  --color-highlight-rgb: 255, 0, 0;
+  --color-background: #1b2631;
+  --color-accent-rgb: 0, 255, 180; /* Change to your accent color in RGB */
+  --color-secondaryback: #d9e4e0;
+  font:
+    62.5%/1.6 "Anklada",
+    sans-serif;
+  color: var(--color-primary);
+  background-color: var(--color-background);
+  --font-anklada: "Anklada", sans-serif;
+  --font-antoniozull: "AntonioZull", sans-serif;
+  --font-cubic: "Cubic", sans-serif;
+  --font-dope: "DopeDisplay", sans-serif;
+  --font-ethnocentric: "Ethnocentric", sans-serif;
+  --font-kgprimary: "KGPrimary", sans-serif;
+  --font-kgprimarynospace: "KGPrimaryNoSpace", sans-serif;
+  --font-umgambyr: "UMGambyr", sans-serif;
+  --font-bmspa: "BMSPA", sans-serif;
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: context-menu;
+  text-decoration: none;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  height: 100dvh;
+  width: 100dvw;
+}
+
+#root {
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}

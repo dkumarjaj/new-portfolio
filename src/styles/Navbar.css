@@ -1,0 +1,115 @@
+/* Glass Navbar */
+.navbar {
+  position: fixed;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-items: center;
+  height: 60px;
+  left: 50%;
+  width: fit-content;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px;
+  border-radius: 20px;
+
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(16px) saturate(180%);
+
+  z-index: 9999;
+  background:
+    linear-gradient(#1d1d1d) padding-box,
+    conic-gradient(
+        from var(--angle),
+        transparent 20%,
+        #f74747,
+        white,
+        #ff5c5c,
+        transparent 80%
+      )
+      border-box;
+
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+  border-image: initial;
+  animation: 2s linear 0s infinite normal none running rotate-border;
+  gap: 0.7rem;
+}
+
+@keyframes rotate-border {
+  100% {
+    --angle: 360deg;
+  }
+}
+
+/* Nav Items */
+.navbar .nav-item,
+.navbar .nav-item:visited,
+.navbar .nav-item:link {
+  cursor: pointer;
+  position: relative;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+
+  padding: 12px 22px;
+  border-radius: 14px;
+
+  font-size: 1vmax;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.nav-item {
+  color: var(--color-primary);
+}
+/* Hover Effect */
+.nav-item:hover {
+  color: var(--color-secondaryback);
+  background: rgba(0, 0, 0, 0.24);
+  transform: translateY(-2px);
+  transform: scale(0.9);
+}
+
+/* Shine Animation */
+.nav-item::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: -120%;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(212, 212, 212, 0.384),
+    transparent
+  );
+
+  transition: 0.7s;
+}
+
+.nav-item:hover::before {
+  left: 120%;
+}
+
+/* Active State */
+.nav-item.active {
+  color: var(--color-background);
+  background: var(--color-primary);
+  border: 1px solid var(--color-highlight);
+}

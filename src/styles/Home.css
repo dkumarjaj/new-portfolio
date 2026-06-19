@@ -1,0 +1,722 @@
+/* ==========================
+HERO SECTION
+========================== */
+
+#root {
+  position: relative;
+}
+
+.social-links a,
+.social-links a i {
+  cursor: pointer;
+}
+.mainpage {
+  background: none;
+}
+
+.hero {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  padding-top: 80px;
+  position: relative;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  box-sizing: border-box;
+  padding-bottom: 10px;
+}
+
+#root::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+/* ==========================
+CONTAINER
+========================== */
+
+.hero-container {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 5;
+  box-sizing: border-box;
+}
+
+.hero-content,
+.hero-image-area {
+  width: 50%;
+}
+
+/* ==========================
+LEFT CONTENT
+========================== */
+
+.hero-name {
+  width: 100%;
+  font-family: var(--font-ethnocentric);
+  font-size: clamp(5rem, 8vmin, 10rem);
+  font-weight: 900;
+  line-height: 0.9;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-role {
+  font-family: var(--font-antoniozull);
+  font-size: 2.8rem;
+  color: var(--color-accent);
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+
+.hero-text {
+  max-width: 55rem;
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: rgba(240, 244, 248, 0.7);
+  margin-bottom: 4rem;
+  border-left: 1px solid var(--color-accent);
+  text-align: start;
+  padding: 5px;
+}
+
+.sentence {
+  font-size: 2.5vmax;
+  letter-spacing: 2px;
+  font-family: var(--font-anklada);
+}
+
+.skills {
+  color: var(--color-highlight);
+}
+
+/* ==========================
+BUTTONS
+========================== */
+
+.hero-buttons {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 1.6rem 3.5rem;
+  border-radius: 5rem;
+  font-size: 1.6rem;
+  transition: all 0.35s ease;
+}
+
+.btn-primary {
+  border: none;
+  cursor: pointer;
+  background: var(--color-accent);
+  color: var(--color-background);
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 16px var(--color-accent);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--color-accent);
+}
+
+/* ==========================
+SOCIALS
+========================== */
+
+.social-links {
+  display: flex;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-size: 2.2rem;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--color-accent);
+  transform: translateY(-4px);
+}
+
+/* ==========================
+IMAGE SIDE
+========================== */
+
+.hero-image-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.polaroid {
+  width: 40vmin;
+  padding: 1.5rem;
+  box-shadow: 0 2rem 5rem rgba(var(--color-accent-rgb), 0.1);
+  transform: rotate(-3deg);
+  transition: all 0.5s ease;
+}
+
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.polaroid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ==========================
+FOOTER
+========================== */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5vw;
+  font-size: 1.1rem;
+  position: relative;
+  z-index: 10;
+  flex-wrap: wrap;
+  gap: 2rem;
+  /* border-top: 1px solid rgba(255,255,255,0.08); */
+}
+
+footer > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Scroll Indicator - CENTERED & SPACIOUS */
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem; /* Increased spacing */
+  font-family: var(--font-anklada);
+  letter-spacing: 0.4rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 1rem;
+}
+
+.scroll-indicator small {
+  font-size: 0.85rem;
+  opacity: 0.65;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: -0.4rem;
+}
+
+/* Scroll lines - Star Twinkle Effect */
+.scroll-line {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--color-accent),
+    transparent
+  );
+  width: 1.5px;
+  height: 80px;
+  position: relative;
+  animation: starTwinkle 2.8s ease-in-out infinite;
+}
+
+.scroll-line.horizontal {
+  width: 90px;
+  height: 1.5px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-accent),
+    transparent
+  );
+  animation: starTwinkle 2.8s ease-in-out infinite;
+}
+
+@keyframes starTwinkle {
+  0%,
+  100% {
+    opacity: 0.35;
+    filter: brightness(0.9);
+  }
+  40% {
+    opacity: 1;
+    filter: brightness(2.2) drop-shadow(0 0 8px var(--color-accent));
+  }
+  70% {
+    opacity: 0.7;
+    filter: brightness(1.4);
+  }
+}
+
+/* Optional: Different timing for vertical & horizontal for more natural feel */
+.scroll-line.vertical {
+  animation-duration: 2.3s; /* Slightly different speed */
+}
+
+.scroll-line.horizontal {
+  animation-duration: 3.1s;
+}
+/* ==========================
+RESPONSIVE
+========================== */
+
+@media (max-width: 1200px) {
+  .scroll-indicator {
+    position: static;
+    transform: none;
+    order: -1; /* Moves it higher on smaller screens */
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  footer {
+    justify-content: center;
+    padding: 2rem 8vw;
+  }
+}
+
+/* ====================== HIGHLIGHTS / STATS ====================== */
+.highlights {
+  padding: 5rem 5vw;
+  background: rgba(255, 255, 255, 0.025);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.highlights::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(var(--color-accent-rgb), 0.1) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.stat-item {
+  padding: 2rem 1rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat-item:hover {
+  transform: translateY(-12px);
+}
+
+.stat-item h3 {
+  font-size: clamp(2.6rem, 5vw, 3.8rem);
+  margin: 0 0 0.8rem 0;
+  color: var(--color-accent);
+  font-family: var(--font-ethnocentric);
+  letter-spacing: 2px;
+  line-height: 1;
+  transition: all 0.4s ease;
+}
+
+.stat-item:hover h3 {
+  filter: brightness(1.3);
+  text-shadow: 0 0 20px rgba(var(--color-accent-rgb), 0.5);
+}
+
+.stat-item p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+}
+
+/* ====================== SECTION TITLES ====================== */
+.section-title {
+  font-size: clamp(2.4rem, 4.5vw, 3.2rem);
+  text-align: center;
+  margin-bottom: 4rem;
+  font-family: var(--font-ethnocentric);
+  letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.95);
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 2px;
+  animation: starTwinkle 2.8s ease-in-out infinite;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-accent),
+    transparent
+  );
+}
+
+/* ====================== FEATURED PROJECTS ====================== */
+.featured-projects {
+  padding: 6rem 5vw;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.5rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2.2rem;
+  border-radius: 16px;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  background-image: url();
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+  transition: 0.7s;
+}
+
+.project-card:hover::before {
+  left: 200%;
+}
+
+.project-card:hover {
+  transform: translateY(-15px);
+  border-color: rgba(var(--color-accent-rgb), 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.project-card p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  strong {
+    color: var(--color-accent);
+  }
+}
+
+.project-card a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.project-card a:hover {
+  color: white;
+  letter-spacing: 1px;
+}
+
+.text-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+/* ====================== TECH STACK ====================== */
+.skills-section {
+  padding: 6rem 5vw;
+  padding-bottom: 3rem;
+  background: radial-gradient(
+    circle,
+    rgba(var(--color-highlight-rgb), 0.1) 0%,
+    transparent 70%
+  );
+  border-top: 1px solid rgba(250, 250, 250, 0.027);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.322);
+}
+
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tech-tag {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.9rem 1.8rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+}
+
+.tech-tag:hover {
+  background: var(--color-accent);
+  color: var(--color-primary);
+  transform: scale(1.08) translateY(-3px);
+  background-color: #ff00001c;
+  box-shadow: 0 8px 16px var(--color-highlight);
+}
+
+/* ====================== CALL TO ACTION ====================== */
+.cta-section {
+  padding: 7rem 5vw;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(var(--color-accent-rgb), 0.06)
+  );
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cta-section h2 {
+  font-size: clamp(2.6rem, 5vw, 3.5rem);
+  margin-bottom: 1.2rem;
+  font-family: var(--font-ethnocentric);
+  letter-spacing: 2px;
+}
+
+.cta-section p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cta-section .btn-primary.large {
+  padding: 1.1rem 3rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
+}
+
+.techs {
+  margin-top: 20px;
+  color: var(--color-primary);
+  background-color: var(--color-highlight);
+}
+
+.techs:hover {
+  box-shadow: 0 0px 16px var(--color-highlight);
+}
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    padding: 2rem 5vw;
+  }
+
+  .scroll-indicator {
+    gap: 1rem;
+  }
+}
+
+.address {
+  color: var(--color-accent);
+}
+/* ==========================
+TABLET
+========================== */
+
+@media (max-width: 1250px) {
+  .hero-name {
+    font-size: 5vmax;
+  }
+}
+
+/* ==========================
+MOBILE
+========================== */
+
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 4rem;
+    justify-content: center;
+  }
+
+  .hero-content,
+  .hero-image-area {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-image-area {
+    margin-top: 2rem;
+  }
+
+  .hero-text {
+    margin-inline: auto;
+  }
+
+  .hero-buttons,
+  .social-links {
+    justify-content: center;
+  }
+
+  .polaroid {
+    width: min(50vw, 380px);
+  }
+
+  .hero-name {
+    font-size: clamp(3.5rem, 10vw, 6rem);
+  }
+
+  .hero-role {
+    font-size: 2rem;
+  }
+}
+.social-links a {
+  font-size: 2.5rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: relative;
+}
+
+/* Snake-like Up-Down Wave Animation */
+.social-links a i {
+  display: inline-block;
+  animation: snakeUpDown 2.5s ease-in-out infinite;
+}
+
+/* Staggered delays for snake/wave effect */
+/* Faster, tighter delays for a smoother wave ripple */
+.social-links a:nth-child(1) i {
+  animation-delay: 0s;
+}
+.social-links a:nth-child(2) i {
+  animation-delay: 0.2s;
+}
+.social-links a:nth-child(3) i {
+  animation-delay: 0.4s;
+}
+.social-links a:nth-child(4) i {
+  animation-delay: 0.6s;
+}
+
+@keyframes snakeUpDown {
+  0% {
+    transform: translateY(0) rotate(-5deg);
+  }
+  25% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(0) rotate(-5deg);
+  }
+  75% {
+    transform: translateY(15px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+}
+
+/* Hover Effects */
+.social-links a:hover {
+  transform: scale(1.2);
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Brand colors on hover */
+.social-links a:nth-child(1):hover {
+  background: #000;
+} /* X/Twitter */
+.social-links a:nth-child(2):hover {
+  background: #e1306c;
+} /* Instagram */
+.social-links a:nth-child(3):hover {
+  background: #333;
+} /* GitHub */
+.social-links a:nth-child(4):hover {
+  background: #0077b5;
+} /* LinkedIn */
