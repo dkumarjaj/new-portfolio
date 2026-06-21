@@ -33,7 +33,7 @@ const Home: React.FC = () => {
   const [time, setTime] = useState(new Date());
 
   const intro =
-    "Crafting elegant digital experiences with clean code and creative solutions.";
+    "I like building things, learning how technology works, and sharing what I discover along the way.";
 
   const typedRef = useRef<HTMLSpanElement>(null);
 
@@ -209,23 +209,22 @@ const Home: React.FC = () => {
             </h3>
 
             <p className="hero-subtitle sr-only">
-              Tech Enthusiast, Mentor & Full-Stack Developer from Harhanja,
-              Jhajha, Bihar
+              I build websites, experiment with technology, and enjoy
+              understanding how things work behind the scenes.
             </p>
             <h2 className="hero-text">
-              Tech Enthusiast, Mentor & Full-Stack Developer from Harhanja,
-              Jhajha, Bihar
+              I build websites, experiment with technology, and enjoy
+              understanding how things work behind the scenes.
             </h2>
 
             <p className="hero-text">{intro}</p>
 
             <p className="hero-text">
-              From{" "}
-              <span className="address">Harhanja, Jhajha, Jamui, Bihar</span> —
-              a passionate technologist who loves turning ideas into reality.
-              With expertise in modern web technologies, I build fast, scalable,
-              and beautiful digital solutions while mentoring aspiring
-              developers.
+              I'm from <span className="address">Harhanja</span>, a small
+              village near <span className="address">Jhajha in Bihar</span> —
+              Most of what I know today came from curiosity, experimentation,
+              and countless hours spent building projects and figuring things
+              out along the way.
             </p>
 
             <div className="hero-buttons">
@@ -376,11 +375,11 @@ const Home: React.FC = () => {
       <section className="skills-section">
         <h2 className="section-title">Tech Stack</h2>
         <div className="tech-grid">
-          <span className="tech-tag">React</span>
+          <span className="tech-tag ">React</span>
           <span className="tech-tag">TypeScript</span>
-          <span className="tech-tag">Next.js</span>
+          <span className="tech-tag">ejs</span>
           <span className="tech-tag">Node.js</span>
-          <span className="tech-tag">Tailwind CSS</span>
+          <span className="tech-tag">CSS3</span>
           <span className="tech-tag">Python</span>
           <span className="tech-tag">MongoDB</span>
           <span className="tech-tag">Docker</span>
@@ -395,7 +394,10 @@ const Home: React.FC = () => {
 
       {/* Call to Action */}
       <section className="cta-section">
-        <h2>Let's Build Something Amazing Together</h2>
+        <h2>
+          Have an <span className="highlight"> idea</span>? Let's
+          <span className="highlight"> talk</span>.
+        </h2>
         <p>
           Currently open for collaborations, freelance projects, and mentorship
           opportunities.

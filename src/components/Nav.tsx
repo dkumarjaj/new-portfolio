@@ -34,15 +34,15 @@ function Nav() {
         }
         to="/portfolio/contact"
       >
-        Contact
+        Connect
       </NavLink>
       <NavLink
         className={({ isActive }) =>
           isActive ? "nav-item active" : "nav-item"
         }
-        to="/portfolio/gallery"
+        to="/portfolio/life-beyond-code"
       >
-        Gallery
+        Chronicles
       </NavLink>
     </nav>
   );
