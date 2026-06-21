@@ -87,6 +87,7 @@ body {
   box-sizing: border-box;
   height: 100dvh;
   width: 100dvw;
+  scroll-behavior: smooth;
 }
 
 #root {

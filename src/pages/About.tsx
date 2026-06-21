@@ -1,18 +1,42 @@
 import { Helmet } from "react-helmet-async";
 import "../styles/About.css";
-import Image from "../assets/images/dev5.jpeg"
+import Image from "../assets/images/dev5.jpeg";
 import { Link } from "react-router";
-import Resume from "../assets/resumes/DevendraKumarCV.pdf"
-
+import Resume from "../assets/resumes/DevendraKumarCV.pdf";
+import { useEffect, useState } from "react";
 function About() {
+  const [isVisible, setIsVisible] = useState(false);
+
   const handleDownload = () => {
-  const link = document.createElement("a");
-  link.href = Resume;
-  link.download = "Devendra_Kumar_Resume.pdf";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-};
+    const link = document.createElement("a");
+    link.href = Resume;
+    link.download = "Devendra_Kumar_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+  // Smooth slow scroll to top
+  const scrollToTop = () => {
+  document.getElementById("root")?.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+  };
 
   return (
     <>
@@ -147,7 +171,7 @@ function About() {
           })}
         </script>
       </Helmet>
-      <div className="main-section">
+      <div className="main-section" id="top">
         <section className="about-top">
           <span className="about-label">ABOUT ME</span>
           <div className="about-image">
@@ -182,38 +206,16 @@ function About() {
             technology started with simple curiosity <br />
             <br /> — wanting to{" "}
             <span className="important-keyword">understand</span> how{" "}
-            <span className="important-keyword"> websites</span> websites,
+            <span className="important-keyword"> websites</span>,
             <span className="important-keyword"> apps</span>, and
             <span className="important-keyword"> digital systems</span> work
             behind the scenes.
-          </p>
-
-          <p>
-            —Over time, that curiosity turned into a habit of building things.
-            What started with learning basic web development eventually grew
-            into creating{" "}
-            <span className="important-keyword">school websites</span> ,{" "}
-            <span className="important-keyword">management systems</span>, and
-            personal
-            <span className="important-keyword"> projects</span> that solve{" "}
-            <span className="important-keyword">real </span> problems.
           </p>
           <p className="emphasize">
             But <span className="important-keyword-h">technology</span> isn't my
             only <span className="important-keyword-h">interest</span> .
           </p>
 
-          <p>
-            —Over time, that curiosity turned into a habit of building things.
-            Alongside <span className="important-keyword">web-development</span>
-            , I teach students from Classes{" "}
-            <span className="important-keyword">1 to 8</span> , which has taught
-            me something important: if you truly understand a concept, you
-            should be able to <span className="important-keyword"></span>{" "}
-            explain it simply. That mindset influences the way I{" "}
-            <span className="important-keyword">learn, build</span> and
-            <span className="important-keyword"> communicate</span>.
-          </p>
           <p>
             —Over time, that curiosity turned into a{" "}
             <span className="important-keyword">habit</span> of building
@@ -251,6 +253,9 @@ function About() {
             <span className="important-keyword"> next</span>.
           </p>
           <div className="ctas">
+            <Link to="/portfolio/project" className="btn-secondary">
+              View Projects
+            </Link>
             <a
               href={Resume}
               target="_blank"
@@ -260,10 +265,6 @@ function About() {
             >
               Download Resume
             </a>
-
-            <Link to="/portfolio/project" className="btn-secondary">
-              View Projects
-            </Link>
 
             <Link to="/portfolio/contact" className="btn-secondary">
               Contact Me
@@ -308,24 +309,23 @@ function About() {
           <h2>Current Focus</h2>
 
           <div className="focus-grid">
-            <span>MERN Stack</span>
-            <span>System Design</span>
+            <span>Advance DevOps</span>
             <span>SEO</span>
             <span>Automation</span>
             <span>Cloud Deployment</span>
-            <span>AI Integrations</span>
-            <span>DevOps</span>
+            <span>System Design</span>
+            <span>DSA</span>
           </div>
         </section>
 
         <section className="stats-section">
           <div className="stat">
-            <h3>500+</h3>
-            <p>Form Submissions Managed</p>
+            <h3>50+</h3>
+            <p>Technologies Explored</p>
           </div>
           <div className="stat">
             <h3>12000+</h3>
-            <p>Points on SIDH</p>
+            <p>Skill-India Points</p>
           </div>
 
           <div className="stat">
@@ -336,62 +336,104 @@ function About() {
             <h3>15+</h3>
             <p>Certifications</p>
           </div>
+        </section>
 
+        <section className="focus-section">
+          <h2>Role | Idendity</h2>
+
+          <div className="focus-grid">
+            <span>Software Engineer</span>
+            <span>Tech & Science Mentor</span>
+            <span>Technology Enthusiast</span>
+            <span>SEO Specialist</span>
+          </div>
+        </section>
+
+        <section id="skills" className="focus-section skill-section">
+          <h2>Skills</h2>
+          <div className="focus-grid skill-grid">
+            <span>MERN-Stack Development</span>
+            <span>UI/UX Desiging </span>
+            <span>SEO & Web performance</span>
+            <span>Database Design</span>
+            <span>Cloud Deployment</span>
+            <span>AI Integrations</span>
+            <span>System Design</span>
+            <span>Responsive Web Development</span>
+            <span>Cloud Deployment</span>
+            <span>DevOps Basics</span>
+            <span>Science & Technology Mentoring</span>
+            <span>Technical Problem Solving</span>
+            <span>Primary School Teaching</span>
+            <span>Project Management</span>
+          </div>
+        </section>
+
+        <section id="tech-skill" className="focus-section tech-skill-section">
+          <h2>Tech Skills</h2>
+          <div className="focus-grid skill-grid">
+            <span>React.js</span>
+            <span>Node.js</span>
+            <span>MySQL</span>
+            <span>Express.js</span>
+            <span>MongoDB</span>
+            <span>Redis</span>
+            <span>JavaScript</span>
+            <span>Redux</span>
+            <span>WebSockets</span>
+            <span>Git & GitHub</span>
+            <span>REST APIs</span>
+            <span>EJS</span>
+            <span>Python</span>
+            <span>PHP</span>
+            <span>Responsive Design</span>
+            <span>C & C++</span>
+            <span>Redis</span>
+            <span>GSAP</span>
+            <span>Docker</span>
+            <span className="others">And Counting...</span>
+          </div>
         </section>
 
         <section className="vision-section">
           <h2>My Vision</h2>
 
           <p>
-            My goal is to create technology that improves education, businesses,
-            and communities while continuing to grow as an engineer and mentor.
+            To use technology, creativity, and education to solve meaningful
+            problems, create opportunities, and make knowledge more accessible.
+            I aspire to build solutions that positively impact individuals,
+            businesses, and communities while contributing to a future driven by
+            innovation, awareness, and purpose.
+          </p>
+          <h2>My Philosophy</h2>
+
+          <p>
+            Learning is a lifelong journey, and knowledge loses its value if it
+            is kept to yourself. I am committed to learning constantly and
+            teaching openly. Through technology and education, I want to do my
+            part in building a future where information is accessible and
+            opportunities are open to everyone.
+            <span className="tricolor">
+              <span className="red"> Learn Beyond Limits.</span>
+              <span className="white">Apply with Purpose.</span>
+              <span className="green">Serve with Impact.</span>
+            </span>
           </p>
         </section>
+        <a
+          href="#top"
+          onClick={(e) => {
+            e.preventDefault(); // Prevent default jump
+            scrollToTop();
+          }}
+          className={`scroll-top ${isVisible ? "visible" : ""}`}
+          title="Go top"
+        >
+          ↑
+        </a>
       </div>
     </>
   );
 }
 
 export default About;
-
-
-/* 
-
-My approach is simple:
-
-Learn continuously.
-Build useful things.
-Share knowledge.
-Keep improving.
-
-What I Value
-
-• Curiosity over comfort
-• Learning over pretending to know everything
-• Practical solutions over unnecessary complexity
-• Consistency over quick results
-
-Current Focus
-
-• Full-Stack Web Development
-• MERN Stack
-• System Design
-• SEO & Performance
-• AI-Assisted Development
-• Cloud Deployment
-
-Currently Exploring
-
-• Arduino & IoT
-• Digital Marketing
-• Adobe Graphics & Animation
-• PLC, HMI & SCADA
-• Industrial Automation
-• Smart Devices
-
-My Goal
-
-To build useful technology, help people learn, and continue growing through every project, challenge, and opportunity that comes my way.
-
-
-*/
