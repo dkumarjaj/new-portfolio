@@ -95,6 +95,26 @@ function Contact() {
     return isValid;
   };
 
+  const handleWhatsAppSend = () => {
+    const text = `Hi Devendra! 👋
+
+I am ${formData.name} and I want to talk about "${formData.subject}".
+
+📝 Message:
+${formData.message}
+
+📧 Email: ${formData.email}
+📱 Phone: ${formData.phone}
+
+Sent from your portfolio website.`;
+
+    const whatsappUrl = `https://wa.me/919142003626?text=${encodeURIComponent(
+      text,
+    )}`;
+
+    window.open(whatsappUrl, "_blank");
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -106,12 +126,11 @@ function Contact() {
       return;
     }
 
+    handleWhatsAppSend();
     setIsSubmitting(true);
 
     try {
       await new Promise((resolve) => setTimeout(resolve, 1200));
-
-      console.log("Submitted Data:", formData);
 
       setFormData({
         name: "",
@@ -315,7 +334,7 @@ DKumarJaj
           <div className="contact-card">
             <h3>WhatsApp</h3>
             <a
-              href="https://wa.me/919876543210?text=Hi%20Devendra!%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect."
+              href="https://wa.me/9142003626?text=Hi%20Devendra!%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect."
               target="_blank"
               rel="noopener noreferrer"
             >
