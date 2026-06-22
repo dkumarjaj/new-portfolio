@@ -6,6 +6,7 @@ import { HelmetProvider } from "react-helmet-async";
 import Mainpage from "./pages/mainpage";
 import About from "./pages/About";
 import Home from "./pages/Home";
+import Contact from "./pages/contact";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
@@ -16,7 +17,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="" element={<Home />}></Route>
           <Route path="about" element={<About />}></Route>
           <Route path="project" element={<Home />}></Route>
-          <Route path="contact" element={<Home />}></Route>
+          <Route path="contact" element={<Contact />}></Route>
           <Route path="life-beyond-code" element={<Home />}></Route>
           <Route path="Achievements" element={<Home />}></Route>
         </Route>

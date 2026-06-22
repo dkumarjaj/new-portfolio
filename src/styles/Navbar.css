@@ -23,7 +23,7 @@
 
   z-index: 9999;
   background:
-    linear-gradient(#1d1d1d) padding-box,
+    linear-gradient(#0a0a0a) padding-box,
     conic-gradient(
         from var(--angle),
         transparent 20%,
@@ -63,7 +63,7 @@
   padding: 12px 22px;
   border-radius: 14px;
 
-  font-size: 1vmax;
+  font-size: .8vmax;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
 
@@ -111,5 +111,13 @@
 .nav-item.active {
   color: var(--color-background);
   background: var(--color-primary);
-  border: 1px solid var(--color-highlight);
+}
+
+
+@media(max-width:720px){
+  .navbar .nav-item,
+.navbar .nav-item:visited,
+.navbar .nav-item:link{
+  font-size: 1vmax;
+}
 }

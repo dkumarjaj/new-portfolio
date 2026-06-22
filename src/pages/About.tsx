@@ -76,7 +76,10 @@ function About() {
 
         <meta name="robots" content="index, follow" />
 
-        <link rel="canonical" href="https://yourdomain.com/about" />
+        <link
+          rel="canonical"
+          href="https://dkumarjaj.jackjohan7520.workers.dev/about"
+        />
 
         <meta property="og:type" content="profile" />
 
@@ -90,11 +93,14 @@ function About() {
           content="Discover the story, journey, skills, achievements, and vision of Devendra Kumar, a Full-Stack Developer passionate about technology and innovation."
         />
 
-        <meta property="og:url" content="https://yourdomain.com/about" />
+        <meta
+          property="og:url"
+          content="https://dkumarjaj.jackjohan7520.workers.dev/about"
+        />
 
         <meta
           property="og:image"
-          content="https://yourdomain.com/android-chrome-512x512.png"
+          content="https://dkumarjaj.jackjohan7520.workers.dev/android-chrome-512x512.png"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -111,7 +117,7 @@ function About() {
 
         <meta
           name="twitter:image"
-          content="https://yourdomain.com/android-chrome-512x512.png"
+          content="https://dkumarjaj.jackjohan7520.workers.dev/android-chrome-512x512.png"
         />
 
         <script type="application/ld+json">
