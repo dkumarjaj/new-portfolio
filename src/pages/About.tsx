@@ -16,7 +16,6 @@ function About() {
     document.body.removeChild(link);
   };
 
-
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.scrollY > 300) {
@@ -32,16 +31,16 @@ function About() {
 
   // Smooth slow scroll to top
   const scrollToTop = () => {
-  document.getElementById("root")?.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
+    document.getElementById("root")?.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
     <>
       <Helmet>
-        <title>Devendra Kumar | About me</title>
+        <title>Devendra Kumar | Technology Professional Bihar</title>
 
         <meta
           name="description"
@@ -425,6 +424,17 @@ function About() {
               <span className="green">Serve with Impact.</span>
             </span>
           </p>
+        </section>
+        <section className="focus-section dkumarjaj-hobbies-section">
+          <h2>Hobbies</h2>
+
+          <div className="focus-grid dkumarjaj-hobbies">
+            <span>🌱 Plantation, gardening, and plant care</span>
+            <span>🎵 Listening to music</span>
+            <span>👨‍🏫 Teaching children and explaining computer concepts</span>
+            <span>📚 Self-learning and continuous improvement</span>
+            <span>Engineering- 🧩 Problem solving and troubleshooting</span>
+          </div>
         </section>
         <a
           href="#top"

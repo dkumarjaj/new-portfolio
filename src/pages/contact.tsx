@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 
 function Contact() {
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -398,7 +399,7 @@ DKumarJaj
         <div className="contact-form-wrapper">
           <h2>Send a Message</h2>
 
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form className="contact-form" id="contact" onSubmit={handleSubmit}>
             <input
               type="text"
               name="name"
@@ -485,6 +486,15 @@ DKumarJaj
             Every successful project starts with a conversation. Let's discuss
             your ideas and turn them into reality.
           </p>
+          <button
+            onClick={() => {
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            Let's Talk
+          </button>
         </div>
 
         <footer>

@@ -305,6 +305,19 @@
   transform: scale(1.08);
 }
 
+/* Hobbies */
+
+.dkumarjaj-hobbies-section h2{
+  font-family: var(--font-Anklada);
+  font-size: 8rem;
+}
+.dkumarjaj-hobbies span{
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  font-family: var(--font-umgambyr);
+  font-size: 1.2rem;
+}
+
 /*  SKILLS */
 .skill-section{
     background: repeating-linear-gradient(
