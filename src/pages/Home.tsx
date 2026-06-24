@@ -29,6 +29,7 @@ const Home: React.FC = () => {
   const images = [Image1, Image2, Image3, Image4, Image5, Image6, Image7];
 
   const selectedImage = weekNumber % images.length;
+  const realImage=images[selectedImage]  
 
   const [time, setTime] = useState(new Date());
 
@@ -276,7 +277,7 @@ const Home: React.FC = () => {
           {/* Right Image */}
           <div className="hero-image-area">
             <img
-              src={images[selectedImage]}
+              src={realImage}
               className="polaroid"
               alt="Devendra Kumar"
             />
@@ -298,7 +299,7 @@ const Home: React.FC = () => {
 
             <div className="scroll-line horizontal" />
 
-            <span>5000+</span>
+            <span>500+</span>
             <small>Digital Travelers</small>
 
             <div className="scroll-line vertical" />
