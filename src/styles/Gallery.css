@@ -147,6 +147,10 @@
   line-height: 1.45;
 }
 
+.gallery-overlay span{
+  font-size: 1rem;
+  font-weight: 900;
+}
 .category-tag {
   align-self: flex-start;
   background: rgba(255, 255, 255, 0.2);

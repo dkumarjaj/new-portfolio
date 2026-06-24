@@ -246,7 +246,27 @@ export default function Gallery() {
               <div className="gallery-overlay">
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
-                <span className="category-tag">{item.category}</span>
+                <span
+                  style={{
+                    backgroundColor:
+                      item.category === "Nature & Plantation"
+                        ? "#22C55E"
+                        : item.category === "Code & Creations"
+                          ? "#3B82F6"
+                          : item.category === "Learning Journey"
+                            ? "#F59E0B"
+                            : item.category === "Experiments & Innovation"
+                              ? "#8B5CF6"
+                              : item.category === "Behind The Build"
+                                ? "#F97316"
+                                : item.category === "Achievements"
+                                  ? "#EAB308"
+                                  : "",
+                  }}
+                  className="category-tag"
+                >
+                  {item.category}
+                </span>
               </div>
             </div>
           ))}
